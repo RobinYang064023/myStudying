@@ -1,0 +1,49 @@
+# Chapter 5 Testing the Software with Blinders On
+
+---
+
+- Test-to-Pass
+  - 測試軟體是否可以在舒適的環境下運行，像是測試新車最基本的能不能動、能不能上路(輪胎尺寸對不對、引擎吵不吵、剎車有沒有用等等)。
+- Test-to-Fail
+  - 用嚴苛的條件、環境測試軟體的能耐，像是測試新車能不能每秒加速達到 spec 上的數據等等。
+- Equivalence Partitioning
+  - 將 Test Case 依其等價性做精煉。
+- Data Testing
+  - Boundary Contitions
+    - Types of Boundary Conditions
+      - Numeric, Character, Position, Quantity, Speed, Location, Size
+    - Characteristics of Those Types
+      - First/Last, Start/Finish, Min/Max, Over/Under, Empty/Full, Slowest/Fastest, Largest*Smallest, Next-To/Farthest-From, Shortest/Longest, Soonest/Latest, Highest/Lowest
+  - Sub-Boundary Conditions
+    - Power of two
+    - ACSII
+  - Default, Empty, Blank, Null, Zero, and None
+  - Invalid, Wrong, Incorrect, and Garbage Data
+- State Testing
+  - Testing the Software's Logic Flow
+    - Creating a State Transition Map
+      - Each unique state that the software can be in.
+      - The input or condition that takes it from one state to the next.
+      - Set conditions and produced output when a state is entered or exited.
+    - Reducing the Number of States and Transitions to Test
+      - 至少進入過全部的狀態一次，不論手法。
+      - 測試最容易使用、進入的狀態(static black-box analysis)。
+      - 測試 state 間最常走的path。
+      - 測試所有的 error states ，確保它是存在、正確的及其返回值亦為正確。
+    - What to Specifically Test
+  - Testing States to Fail
+    - Race Conditions and Bad Timing
+      - Saving and loading the same document at the same time with two different program.
+      - Sharing the same printer, communications port, or other peripheral.
+      - Pressing keys or sending mouse clicks while the software is loading or changing states.
+      - Shutting down or starting up two or more instances of the software at the same time.
+      - Using different programs to simultaneously access a common database.
+    - Repetition, Stress, and Load
+      - Repetition: 測其重複執行的狀況，重點是有沒有 memory leak 。
+      - Stress: 在環境條件很差的情況下做測試，如低記憶體、低CPU等等。
+      - Load: 用好的環境測試軟體是否能負擔預期的負荷量。
+- Other Black-Box Test Techniques
+  - Behave Like a Dumb User
+  - Look for Bugs Where You;ve Already Found Them
+  - Think like a Hacker
+  - Follow Experience, Intution, and Hunches

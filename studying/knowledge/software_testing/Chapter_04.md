@@ -1,0 +1,76 @@
+# Chapter 4 Examing the Specification
+
+---
+
+- Black-Box Testing
+  - You test it when you don't actually know about the detail inside the box(what the code actually does).
+  - Sometimes, Black-Box Testing is referred to as functional testing or behavioral testing by meaning.
+- White-Box Testing
+  - You test it when you know about the detail inside the box.
+  - Be aware of stepping into the trap that you tailor(fit) the tests to match the code's operation.
+- Static Testing
+  - Test something that is not running.
+- Dynamic Testing
+  - Test somethinh that is running.
+- Static Black-Box Testing
+  - Test the specification
+- High-Level Review of the Specification
+  - Pretebd to Be the Customer
+    - Check the spec if it meet the customer's need or not.
+  - Research Existing Standard and Guidelines
+    - Standards should be strictly adhered to if your team has decided that it's import to comply with them completely.
+    - Guidelines are optional but should be followed.
+    - Corporate Terminology and Conventions
+      - It should adopt the common terms and conventions used by the users.
+    - Industry Requirements
+    - Government Standards
+    - GUI
+    - Security Standards
+  - Review and Test Similar Software
+    - Scale
+    - Complexity
+    - Testability
+    - Quality/Reliability
+    - Security
+- Low-Level Specification Test Techniques
+  - Specification Attributes Checklist
+    - Complete
+      - Is anything missing or forgotten?
+      - Is it thorough?
+      - Does it include everything necessary to make it stand alone.
+    - Accurate
+      - Is the proposed solution correct?
+      - Does it properly define the goal?
+      - Are there any errors?
+    - Precise, Unambiguous, and Clear
+      - Is the description exact and not vague?
+      - Is there a single interpretation?
+      - Is it easy to read and understand?
+    - Consistent
+      - Is the description of the feature written so that it doesn't conflict with itself or other items in the specification?
+    - Relevant
+      - Is the statement necessary to specify the feature?
+      - Is it extra information that should be left out?
+      - Is the feature traceable to an original customer?
+    - Feasible
+      - Can the feature be implemented with the available personnel, tools, and resources within the specified budget and schedule?
+    - Code-free
+      - Does the specification stick with defining the product and not the underlying software design, architecture, code?
+    - Testable
+      - Can the feature be tested?
+      - Is enough information provided that a tester could create tests to verify its operation?
+  - Specification Terminology Checklist
+    - Always, Every, All, None, Never
+      - 必須遵守，不可違反。
+    - Certainly, Therefore, Clearly, Obvious, Evidently
+      - 說服你接受，Don't fall into trap。
+    - Some, Sometimes, Often, Usually, Ordinarily, Customarily, Most, Mostly
+      - 過於模糊，不可測試。
+    - Etc, And So Forth, And So on, Such as
+      - 不該用，因為其不明確而無法測試。
+    - Good, Fast, Cheap, Efficient, Small, Stable
+      - 不該用，因為其不可量化而無法測試。
+    - Handled, Processed, Rejected, Skipped, Eliminated
+      - 會隱藏大量需要 specify 的功能(functionality)
+    - If...Then...
+      - 須確定 else 會發生甚麼。
