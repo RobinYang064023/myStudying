@@ -71,8 +71,22 @@ Application Program(sender)                Application Program(receiver)
       - 它在哪
     - routes
       - 怎麼去那
-
 - Fragmentation
+  - 通常我們傳遞一個 datagram 會需要將其切割為更小的 size 來傳遞，但也可以標記 "don't fragment." 避免被切割，同時一旦不切割則會大到不能傳遞的話，此 datagram 會被拒絕傳遞。
+  - How to do the fragmentation and reassemble? We use fields below.
+    - Intranet fragmentaion
+      - fragmentation, transmission and reassembly across a local network which is invisible to the IP module.
+    - identification field
+      - Used to ensure that fragments of different datagrams are not mixed.
+    - fragment offset field
+      - Used to tell the receiver the position of a fragment in the original datagram.
+    - more-fragments flag
+      - Used to indicates the last fragment.
+  - More detail about these fields
+    - identification
+      - 對於每個相同 source-destination pair (來源-目的)、同一時間之協議(protocol for the time)內存活的 datagram 均配給一個 unique 的數值。
+    - more-fragments flag and fragment offset
+      - 在一個完整的 datagram 之 originating protocol module 會將兩者設為 0。
 
 ## Specification
 
